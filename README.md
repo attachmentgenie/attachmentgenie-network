@@ -18,7 +18,7 @@ Installation
 
 Clone this repo to a network directory under your Puppet modules directory:
 
-    network clone network://networkhub.com/uggedal/puppet-module-network.network network
+    git clone git://github.com/uggedal/puppet-module-network.git network
 
 If you don't have a Puppet Master you can create a manifest file
 based on the notes below and run Puppet in stand-alone mode
