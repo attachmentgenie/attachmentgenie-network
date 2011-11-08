@@ -7,12 +7,6 @@ Tested on Debian GNU/Linux 6.0 Squeeze and Ubuntu 10.4 LTS with
 Puppet 2.6. Patches for other operating systems are welcome.
 
 
-TODO
-----
-
-* Actual implementation
-
-
 Installation
 ------------
 
@@ -31,7 +25,7 @@ Usage
 -----
 
 By including the `network::interfaces` class you get a basic configuration
-with a loopback interface and the `eth0` interface configured with DHCP:
+with only a loopback interface:
 
     import network::interfaces
 
@@ -40,7 +34,7 @@ You can enable the `eth0` interface configured with DHCP:
     class { "network::interfaces":
       interfaces => {
         "eth0" => {
-          "type" => "dhcp",
+          "method" => "dhcp",
         }
       },
       auto => ["eth0"],
@@ -51,7 +45,7 @@ Or you can enable the `eth0` interface with a static configuration:
     class { "network::interfaces":
       interfaces => {
         "eth0" => {
-          "type" => "static",
+          "method" => "static",
           "address" => "10.0.0.50",
           "netmask" => "255.255.255.0",
           "gateway" => "10.0.0.1",
@@ -65,13 +59,13 @@ It's also possible to create two interfaces on the same ethernet device:
     class { "network::interfaces":
       interfaces => {
         "eth0" => {
-          "type" => "static",
+          "method" => "static",
           "address" => "10.0.0.50",
           "netmask" => "255.255.255.0",
           "gateway" => "10.0.0.1",
         }
         "eth0:1" => {
-          "type" => "static",
+          "method" => "static",
           "address" => "10.0.0.60",
           "netmask" => "255.255.255.0",
         }
@@ -79,17 +73,19 @@ It's also possible to create two interfaces on the same ethernet device:
       auto => ["eth0", "eth0:1"],
     }
 
-You can create pseudo interfaces useful for handling different wireless
-networks:
+You can create pseudo interfaces which are useful for handling different
+wireless networks:
 
 
     class { "network::interfaces":
       interfaces => {
         "work" => {
+          "method" => "dhcp",
           "wpa-ssid" => "work-wlan",
           "wpa-psk" => "supersecretkey",
         }
         "open" => {
+          "method" => "dhcp",
           "wireless-essid" => "open-wlan",
         }
       },

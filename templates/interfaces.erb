@@ -1,0 +1,25 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+<% if auto.any? %>
+auto <%= auto.join(" ") %>
+<% end %>
+
+<% mappings.each do |name, options| -%>
+mapping <%= name %>
+  script <%= options["script"] %>
+  <% options["maps"].each do |value| -%>
+  map <%= value %>
+  <% end %>
+<% end -%>
+
+<% interfaces.each do |name, options| -%>
+iface <%= name %> inet <%= options["method"] %>
+  <% options.reject { |k, v| k == "method" }.each do |key, value| -%>
+  <%= key %> <%= value %>
+  <% end -%>
+<% end -%>
