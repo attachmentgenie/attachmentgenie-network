@@ -9,17 +9,17 @@ iface lo inet loopback
 auto <%= auto.join(" ") %>
 <% end %>
 
-<% mappings.each do |name, options| %>
-mapping <%= name %>
-  script <%= options["script"] %>
-  <% options["maps"].each do |value| -%>
+<% mappings.sort.each do |name_and_options| %>
+mapping <%= name_and_options[0] %>
+  script <%= name_and_options[1]["script"] %>
+  <% name_and_options[1]["maps"].each do |value| -%>
   map <%= value %>
   <% end -%>
 <% end %>
 
-<% interfaces.each do |name, options| %>
-iface <%= name %> inet <%= options["method"] %>
-  <% options.reject { |k, v| k == "method" }.each do |key, value| -%>
-  <%= key %> <%= value %>
+<% interfaces.each do |name_and_options| %>
+iface <%= name_and_options[0] %> inet <%= name_and_options[1]["method"] %>
+  <% name_and_options[1].reject { |k, v| k == "method" }.sort.each do |option| -%>
+  <%= option[0] %> <%= option[1] %>
   <% end -%>
 <% end %>
