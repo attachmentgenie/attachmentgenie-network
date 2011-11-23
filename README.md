@@ -27,7 +27,7 @@ Usage
 By including the `network::interfaces` class you get a basic configuration
 with only a loopback interface:
 
-    import network::interfaces
+    include network::interfaces
 
 You can enable the `eth0` interface configured with DHCP:
 
