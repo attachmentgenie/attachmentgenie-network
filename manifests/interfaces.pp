@@ -10,6 +10,6 @@ class network::interfaces($interfaces={}, $mappings={}, $auto=[]) {
 	#enable => true,
 	hasrestart => true,
 	hasstatus => false,
-	subsribe => File["/etc/network/interfaces"],
+	subscribe => File["/etc/network/interfaces"],
   }
 }
