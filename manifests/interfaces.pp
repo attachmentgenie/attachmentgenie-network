@@ -7,6 +7,8 @@ class network::interfaces($interfaces={}, $mappings={}, $auto=[]) {
 
   service {"networking":
 	ensure => running,
-	enable => true
+	enable => true,
+	hasrestart => true,
+	hasstatus => false,
   }
 }
