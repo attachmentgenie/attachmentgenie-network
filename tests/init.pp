@@ -1,1 +1,1 @@
-class { "network::interfaces":}
+class { 'network::interfaces':}

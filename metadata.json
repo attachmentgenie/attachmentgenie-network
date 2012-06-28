@@ -14,9 +14,9 @@
     "README.md": "91dfa584e569488832bb148fccf93516",
     "Rakefile": "9b80b157fe8bf8ee3975c7dec8524204",
     "manifests\\init.pp": "e8351a37b6bc62e817b248dee644eb2a",
-    "manifests\\interfaces.pp": "c59011d8bf6e35590db728b89b08a066",
+    "manifests\\interfaces.pp": "0d555256ea39b329393f066f75b7e0c6",
     "templates\\interfaces.erb": "ec3c90575b7c558e258c3eaabce73a80",
-    "tests\\init.pp": "116fa2c5932e98a30c7c074219737dc3",
+    "tests\\init.pp": "39cb7a0e17985f3ba6ce638d0847b289",
     "tests\\interfaces.pp": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "dependencies": [
