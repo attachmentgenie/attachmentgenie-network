@@ -1,0 +1,26 @@
+{
+  "name": "attachmentgenie-puppet-module-network",
+  "author": "Bram Vogelaar",
+  "description": "Module for configuring network interfaces.\n\nTested on Debian GNU/Linux 6.0 Squeeze and Ubuntu 10.4 LTS and 12.04 LTS with\nPuppet 2.6 and 2.7. Patches for other operating systems are welcome.",
+  "license": "MIT License",
+  "project_page": "https://github.com/attachmentgenie/puppet-module-network",
+  "source": "git://github.com/attachmentgenie/puppet-module-network.git",
+  "summary": "Puppet network Module",
+  "version": "1.0.0",
+  "checksums": {
+    "Gemfile": "0a275f1d64df25282170d15201432745",
+    "LICENSE": "53fb7bdc23e16d0ea7b01360fc70d320",
+    "Modulefile": "5e6f954ea0edf4684de3d751780ec1ff",
+    "README.md": "91dfa584e569488832bb148fccf93516",
+    "manifests\\init.pp": "e8351a37b6bc62e817b248dee644eb2a",
+    "manifests\\interfaces.pp": "c59011d8bf6e35590db728b89b08a066",
+    "templates\\interfaces.erb": "ec3c90575b7c558e258c3eaabce73a80",
+    "tests\\init.pp": "116fa2c5932e98a30c7c074219737dc3"
+  },
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d2.2.1"
+    }
+  ]
+}
