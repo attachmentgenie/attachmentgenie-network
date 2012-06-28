@@ -12,6 +12,7 @@
     "LICENSE": "53fb7bdc23e16d0ea7b01360fc70d320",
     "Modulefile": "5e6f954ea0edf4684de3d751780ec1ff",
     "README.md": "91dfa584e569488832bb148fccf93516",
+    "Rakefile": "9b80b157fe8bf8ee3975c7dec8524204",
     "manifests\\init.pp": "e8351a37b6bc62e817b248dee644eb2a",
     "manifests\\interfaces.pp": "c59011d8bf6e35590db728b89b08a066",
     "templates\\interfaces.erb": "ec3c90575b7c558e258c3eaabce73a80",
