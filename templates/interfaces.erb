@@ -19,7 +19,7 @@ mapping <%= name_and_options[0] %>
   <%- end -%>
 <% end %>
 
-<% interfaces.each do |name_and_options| %>
+<% interfaces.sort.each do |name_and_options| %>
 iface <%= name_and_options[0] %> inet <%= name_and_options[1]["method"] %>
   <%- name_and_options[1].reject { |k, v| k == "method" }.sort.each do |option| -%>
   <%= option[0] %> <%= option[1] %>
