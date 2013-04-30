@@ -8,16 +8,16 @@
   "summary": "Puppet network Module",
   "version": "1.0.0",
   "checksums": {
-    "Gemfile": "0a275f1d64df25282170d15201432745",
-    "LICENSE": "53fb7bdc23e16d0ea7b01360fc70d320",
-    "Modulefile": "a0ddbca2704d71bc87da10c306071862",
-    "README.md": "fbb097afcede783c8395182fbf91a214",
-    "Rakefile": "9b80b157fe8bf8ee3975c7dec8524204",
-    "manifests\\init.pp": "e8351a37b6bc62e817b248dee644eb2a",
-    "manifests\\interfaces.pp": "0d555256ea39b329393f066f75b7e0c6",
-    "templates\\interfaces.erb": "ec3c90575b7c558e258c3eaabce73a80",
-    "tests\\init.pp": "39cb7a0e17985f3ba6ce638d0847b289",
-    "tests\\interfaces.pp": "d41d8cd98f00b204e9800998ecf8427e"
+    "Gemfile": "7a90ba90918a5972eb038190feaf7fb4",
+    "LICENSE": "2d9c14720c9adef6ab3197a70adb690c",
+    "Modulefile": "c53c609884f9816cd5a16188173b9105",
+    "README.md": "910a4a35e12070bef31549c97e7cc851",
+    "Rakefile": "30135290361360248d8139853a15c8a2",
+    "manifests/init.pp": "cfdee5bf87cda323d75be0d8f7e3cc50",
+    "manifests/interfaces.pp": "99a58ab61da1aeb3ddcf9af4329216dd",
+    "templates/interfaces.erb": "de7adb21ac55eec77f03dbcd162d6426",
+    "tests/init.pp": "39cb7a0e17985f3ba6ce638d0847b289",
+    "tests/interfaces.pp": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "dependencies": [
     {

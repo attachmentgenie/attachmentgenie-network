@@ -1,3 +1,5 @@
 
 /.project
 pkg/
+/.DS_Store
+/pkg
