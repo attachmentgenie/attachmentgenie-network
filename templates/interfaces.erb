@@ -22,6 +22,12 @@ mapping <%= name_and_options[0] %>
 <% interfaces.sort.each do |name_and_options| %>
 iface <%= name_and_options[0] %> inet <%= name_and_options[1]["method"] %>
   <%- name_and_options[1].reject { |k, v| k == "method" }.sort.each do |option| -%>
+  <%- if option[1].is_a? Array -%>
+  <%- option[1].each do |value| -%>
+  <%= option[0] %> <%= value %>
+  <%- end -%>
+  <%- else -%>
   <%= option[0] %> <%= option[1] %>
+  <%- end -%>
   <%- end -%>
 <% end %>
