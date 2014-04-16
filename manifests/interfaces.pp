@@ -1,13 +1,14 @@
-class network::interfaces($interfaces={}, $mappings={}, $auto=[]) {
-
-  file { '/etc/network/interfaces':
-    content => template('network/interfaces.erb'),
-    notify  => Exec['network-restart'],
+class network::interfaces(
+  $interfaces={},
+  $mappings={},
+  $auto=[],
+  $restart=true,
+) {
+  network::interface_file { '/etc/network/interfaces':
+    interfaces => $interfaces,
+    mappings   => $mappings,
+    auto       => $auto,
+    restart    => $restart,
   }
 
-  exec { 'network-restart':
-      command     => '/etc/init.d/networking restart',
-      path        => '/bin:/usr/bin:/sbin:/usr/sbin',
-      refreshonly => true,
-  }
 }
