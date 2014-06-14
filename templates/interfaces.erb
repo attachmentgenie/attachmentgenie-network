@@ -7,11 +7,11 @@
 auto lo
 iface lo inet loopback
 
-<% if auto.any? %>
-auto <%= auto.join(" ") %>
+<% if @auto.any? %>
+auto <%= @auto.join(" ") %>
 <% end %>
 
-<% mappings.sort.each do |name_and_options| %>
+<% @mappings.sort.each do |name_and_options| %>
 mapping <%= name_and_options[0] %>
   script <%= name_and_options[1]["script"] %>
   <%- name_and_options[1]["maps"].each do |value| -%>
@@ -19,7 +19,7 @@ mapping <%= name_and_options[0] %>
   <%- end -%>
 <% end %>
 
-<% interfaces.sort.each do |name_and_options| %>
+<% @interfaces.sort.each do |name_and_options| %>
 iface <%= name_and_options[0] %> inet <%= name_and_options[1]["method"] %>
   <%- name_and_options[1].reject { |k, v| k == "method" }.sort.each do |option| -%>
   <%- if option[1].is_a? Array -%>
