@@ -1,0 +1,14 @@
+{
+  "name": "attachmentgenie-network",
+  "version": "1.1.2",
+  "author": "Eivind Uggedal <eivind@uggedal.com>",
+  "summary": "Puppet network Module",
+  "license": "MIT License",
+  "source": "git://github.com/attachmentgenie/puppet-module-network.git",
+  "project_page": "https://github.com/attachmentgenie/puppet-module-network",
+  "issues_url": "https://github.com/attachmentgenie/puppet-module-network/issues",
+  "description": "Module for configuring network interfaces.\n\nTested on Debian GNU/Linux 6.0 Squeeze and Ubuntu 10.4 LTS and 12.04 LTS with\nPuppet 2.6 and 2.7. Patches for other operating systems are welcome.",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">=2.2.1"}
+  ]
+}
