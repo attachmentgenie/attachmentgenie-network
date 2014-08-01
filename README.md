@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/attachmentgenie/puppet-module-network.png)](http://travis-ci.org/attachmentgenie/puppet-module-network)
+[![Build Status](https://secure.travis-ci.org/attachmentgenie/attachmentgenie-network.png)](http://travis-ci.org/attachmentgenie/attachmentgenie-network)
 
 Puppet Network Module
 =====================
