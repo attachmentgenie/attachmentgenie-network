@@ -13,8 +13,6 @@ platforms:
   provisioner:
     puppet_apt_repo: https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
 - name: ubuntu-16.04
-  driver_config:
-    box: geerlingguy/ubuntu1604
   provisioner:
     puppet_apt_repo: https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
 - name: debian-7.10
