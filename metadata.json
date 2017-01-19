@@ -1,6 +1,6 @@
 {
   "name": "attachmentgenie-network",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Eivind Uggedal <eivind@uggedal.com>",
   "summary": "Puppet network Module",
   "license": "MIT",
@@ -55,6 +55,9 @@
     }
   ],
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">=2.2.1 <5.0.0" }
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=2.2.1 <5.0.0"
+    }
   ]
 }
