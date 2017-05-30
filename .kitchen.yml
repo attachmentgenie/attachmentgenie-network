@@ -22,7 +22,7 @@ platforms:
   - name: debian-8.7
     provisioner:
       puppet_apt_collections_repo: https://apt.puppetlabs.com/puppetlabs-release-pc1-jessie.deb
-  - name: centos-6.8
+  - name: centos-6.9
     provisioner:
       puppet_yum_collections_repo: http://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
   - name: centos-7.3
