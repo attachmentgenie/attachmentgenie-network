@@ -1,6 +1,6 @@
 {
   "name": "attachmentgenie-network",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Eivind Uggedal <eivind@uggedal.com>",
   "summary": "Puppet network Module",
   "license": "MIT",
