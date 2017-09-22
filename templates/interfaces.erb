@@ -7,8 +7,8 @@
 auto lo
 iface lo inet loopback
 
-<% if @auto.any? %>
-auto <%= @auto.join(" ") %>
+<% if @auto_start.any? %>
+auto <%= @auto_start.join(" ") %>
 <% end %>
 
 <% @mappings.sort.each do |name_and_options| %>
