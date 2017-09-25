@@ -16,6 +16,6 @@ platforms:
   - name: debian-8.9
   - name: debian-9.1
   - name: centos-6.9
-  - name: centos-7.3
+  - name: centos-7.4
 suites:
   - name: puppet5
