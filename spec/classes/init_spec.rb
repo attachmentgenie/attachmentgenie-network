@@ -1,6 +1,6 @@
 require 'spec_helper'
 describe 'network' do
-  on_os_under_test.each do |os, facts|
+  on_supported_os.each do |os, facts|
     context "on #{os}" do
       let(:facts) { facts }
 
@@ -12,18 +12,20 @@ describe 'network' do
       context 'with restart set to true' do
         let(:params) do
           {
-            restart: true
+            restart: true,
           }
         end
+
         it { is_expected.to contain_exec('network restart') }
       end
 
       context 'with restart set to false' do
         let(:params) do
           {
-            restart: false
+            restart: false,
           }
         end
+
         it { is_expected.not_to contain_exec('network restart') }
       end
     end
